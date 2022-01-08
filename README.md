@@ -53,7 +53,7 @@ Implementation
 
 4.)	After the Azure Bastion PaaS environment has been provisioned, the NSG must be configured and connected to the subnet. 
 
-5.)	When linking the NSG to the subnet, a check is carried out in the background. If the port and Protocol configurations not meet Microsoft's specifications, no link to the subnet can be established and the Azure Bastion Service is not active. 
+5.)	When linking the NSG to the subnet, a check is carried out in the background. If the port and Protocol configurations doesn`t meet Microsoft's specifications, no link to the subnet can be established and the Azure Bastion Service is not active. 
 
 Required inbound rules: 
 
