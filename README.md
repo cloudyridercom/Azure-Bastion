@@ -5,9 +5,9 @@ Azure Bastion is a fully managed PaaS-Service, which allows to securely access a
 
 There are 2 methods to access the VM`s in the Azure Cloud:
 
-    1.)	If the Azure VNET is connected with the local network via VPN, it`s possible to connect to the VM over the internal network via RDP. In this case, the VM has     no public IP.
+            1.)	If the Azure VNET is connected with the local network via VPN, it`s possible to connect to the VM over the internal network via RDP. In this case, the              VM has     no public IP.
 
-    2.)	Access the VM through a public IP address, which is assigned due the creation of the VM(standard). The NSG is used to activate the RDP/SSH port. Thus, the VM     is accessible form the Internet, which for many servers is a high security risk.
+            2.)	Access the VM through a public IP address, which is assigned due the creation of the VM(standard). The NSG is used to activate the RDP/SSH port. Thus,              the VM     is accessible form the Internet, which for many servers is a high security risk.
 
 Azure Bastion offers here a good solution to be secure and able to directly access the VMs over the Internet. The machines are still accessed via the classic remote protocols (SSH/RDP), but directly from the Azure portal. The portal is accessed via verified SSL, the connection to the VMs takes place over an own, secured Subnet via the internal, non-public IP addresses.
 
