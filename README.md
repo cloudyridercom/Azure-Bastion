@@ -15,16 +15,24 @@ Azure Bastion offers here a good solution to be secure and be able to directly a
 Azure Bastion – Functions:
 
 •	Login to the Azure portal via SSL and MFA (recommended) 
+
 •	The machines are accessed directly in the browser via SSL / TLS encryption and internal IP addresses
+
 •	No port and protocol activation on the VMs necessary
+
 •	No locally installed RDP or SSH client on the end device for Management of the VM`s required - the management of the VMs can be done by almost any modern end device
+
 •	No need for jump hosts for remote support (partners)
+
 •	Central monitoring of access and control via Azure RBAC
 
 
 Requirements for Azure Bastion:
 
 •	Creation of a special subnet (AzureBastionSubnet)
+
 •	Each VNET has its own Azure bastion subnet and thus requires its own instance of the PaaS service
+
 •	Configuration of a separate, completely secured NSG on the Azure Bastion subnet 
+
 •	Securing access to the Azure portal via RBAC and MFA (recommended) 
