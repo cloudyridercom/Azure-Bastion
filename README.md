@@ -36,3 +36,9 @@ Requirements for Azure Bastion:
 •	Configuration of a separate, completely secured NSG on the Azure Bastion subnet 
 
 •	Securing access to the Azure portal via RBAC and MFA (recommended) 
+
+
+How to create Azure Bastion
+
+![grafik](https://user-images.githubusercontent.com/97125784/148651474-a1cb7368-9dc0-4504-a126-82e9fbff823c.png)
+
