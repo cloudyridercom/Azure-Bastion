@@ -9,7 +9,7 @@ There are 2 methods to access the VM`s in the Azure Cloud:
 
 2.)	Access the VM through a public IP address, which is assigned due the creation of the VM(standard). The NSG is used to activate the RDP/SSH port. Thus, the VM is accessible form the Internet, which for many servers is a high security risk.
 
-Azure Bastion offers here a good solution to be secure and be able to directly access the VM`s over the Internet. The machines are still accessed via the classic remote protocols (SSH/RDP), but directly from the Azure portal. The portal is accessed via verified SSL, the connection to the VM`s takes place over an own, secured Subnet via the internal, non-public IP addresses.
+Azure Bastion offers here a good solution to be secure and able to directly access the VMs over the Internet. The machines are still accessed via the classic remote protocols (SSH/RDP), but directly from the Azure portal. The portal is accessed via verified SSL, the connection to the VMs takes place over an own, secured Subnet via the internal, non-public IP addresses.
 
 
 Azure Bastion – Functions:
