@@ -1,5 +1,5 @@
 # Azure-Bastion
-How to create a Azure Bastion
+Description
 
 Azure Bastion is a fully managed PaaS-Service, which allows to securely access an VM within a VNET. 
 
