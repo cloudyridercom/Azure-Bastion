@@ -40,5 +40,27 @@ Requirements for Azure Bastion:
 
 How to create Azure Bastion
 
+
 ![grafik](https://user-images.githubusercontent.com/97125784/148651474-a1cb7368-9dc0-4504-a126-82e9fbff823c.png)
+
+Implementation
+
+1.)	Creation of the special subnet in the corresponding VNET, it has to be named “AzureBastionSubnet” and be at least a CIDR /27 subnet.
+
+2.)	Then create the Azure Bastion by using the Marketplace. During the configuration, in addition to the standard parameters(Subscription, Resource Group, Name, Region), only the corresponding VNET has to be selected, in which the previously configured “AzureBastionSubnet” is located.
+
+3.)	The creation of the Azure Bastion NSG takes place in one of the next steps. The NSG must namely contain exactly the given bastion configuration, otherwise it cannot be bound to the subnet. Furthermore, there is no binding of a NAT-Gateway or an individual routing table to the “AzureBastionSubnet” allowed. After successful verification, an public IP address is further required to establish a direct SSL connection from an endpoint device(HTML5 Browser) to the VM in the VNET.
+
+4.)	After the Azure Bastion PaaS environment has been provisioned, the NSG must be configured and connected to the subnet. 
+
+5.)	When linking the NSG to the subnet, a check is carried out in the background. If the port and Protocol configurations not meet Microsoft's specifications, no link to the subnet can be established and the Azure Bastion Service is not active. 
+
+Required inbound rules: 
+•	Port 443 must be allowed from the Internet (service tag Configuration)
+•	Incoming traffic from the Azure cloud (service tag) must be allowed
+•	Incoming traffic from the gateway manager (service tag) must be allowed 
+
+Required outbound rules: 
+•	Outbound traffic for the remote protocols (SSH port 22 and RDP Port 3389) must be allowed
+•	Outgoing SSL traffic (443) to the Azure Cloud (service tag) must be allowed
 
