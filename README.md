@@ -69,3 +69,4 @@ Required outbound rules:
 
     •	Outgoing SSL traffic (443) to the Azure Cloud (service tag) must be allowed
 
+If all configurations have been done successfully, an HTML5-based SSL connection to the corresponding VM`s can be set up, without a public IP address and activation of the VM!
