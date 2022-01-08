@@ -1,6 +1,4 @@
-Basics
-
-Azure Bastion is a fully managed PaaS-Service, over which the secure access on VM within a VNET can be realized. 
+Azure Bastion is a fully managed PaaS-Service, which allows the secure access to a VM within a VNET. 
 
 There are 2 methods to access the VM`s in the Azure Cloud:
 
